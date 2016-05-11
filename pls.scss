@@ -1,0 +1,22 @@
+
+// Photoshop unit
+$letter-spacing: 20; 
+
+@function pls($valueFS, $valueLS: $letter-spacing) {
+	$letterSpacing: '';
+
+	$letterSpacing: ( $valueFS * $valueLS ) / 1000;
+
+	@return ($letterSpacing+px);
+}
+
+// example of use :
+// (12, 50)
+// 12 : font-size
+// 50 : Photoshop letter spacing IF not default 20
+/*
+div {
+	letter-spacing: pls(12, 50);
+	font-size: 12px;
+}
+*/
